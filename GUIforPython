@@ -1,0 +1,40 @@
+# pythons
+
+from tkinter import*
+master=Tk()
+master.config(bg='yellow')
+Label(master,text="First Name:",bg='white').grid(row=1)
+Label(master,text="Last Name:",bg='white').grid(row=2)
+Label(master,text="Milk Rate:",bg='white').grid(row=3)
+Label(master,text="juce Rate:",bg='white').grid(row=4)
+Label(master,text="Butter Rate:",bg='white').grid(row=5)
+
+
+def Total_value():
+	x=float(e3.get())
+	y=float(e4.get())
+	z=float(e5.get())
+	d=x+y+z
+	output.insert(END,str(d))
+e1=Entry(master,bg='pink')
+e2=Entry(master,bg='pink')
+e3=Entry(master,bg='pink')
+e4=Entry(master,bg='pink')
+e5=Entry(master,bg='pink')
+e6=Entry(master,bg='pink')
+e1.grid(row=1,column=1)
+e2.grid(row=2,column=1)
+e3.grid(row=3,column=1)
+e4.grid(row=4,column=1)
+e5.grid(row=5,column=1)
+
+
+output=Text(master,width=9,heigh=1)
+output.grid(row=7,column=1)
+Button(master,text="Quit",command=master.quit,bg='red').grid(row=6,column=0)
+
+Button(master,text="Result",command=Total_value,bg='white').grid(row=6,column=1)
+
+
+
+mainloop()
